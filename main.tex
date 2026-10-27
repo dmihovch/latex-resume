@@ -2,7 +2,8 @@
 
 %------------------PACKAGES------------------
 \usepackage[margin=0.5in]{geometry}  % Smaller margins for more content
-\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
 \usepackage{lmodern}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
@@ -47,7 +48,8 @@
     \small 732-239-5689 $|$
     \href{mailto:dmihovch@udel.edu}{dmihovch@udel.edu} $|$
     \href{https://linkedin.com/in/danielmihovch}{linkedin.com/in/danielmihovch} $|$
-    \href{https://github.com/dmihovch}{github.com/dmihovch}
+    \href{https://github.com/dmihovch}{github.com/dmihovch} $|$
+    \href{https://danieljohn.dev}{danieljohn.dev}
 \end{center}
 
 %-----------EDUCATION-----------
@@ -55,7 +57,7 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
     \resumeHeading
       {University of Delaware}{Newark, DE}
-      {Bachelor of Science in Computer Science, conc. Systems \& Networks}{Aug. 2023 -- May 2027 (Expected)}
+      {Bachelor of Science in Computer Science, conc. Systems \& Networks}{Aug 2023 -- May 2027 (Expected)}
 \end{itemize}
 
 %-----------EXPERIENCE-----------
@@ -63,41 +65,58 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
 
     \resumeHeading
-      {Qnity Electronics}{Wilmington, DE}
-      {Digital Technology Intern}{May 2026 -- Aug 2026}
-      \resumeItemListStart
-        \resumeItem{Created a Python data cleaning pipeline to reconcile company HR data with Copilot usage metrics, resolving errors across both datasets to form one cohesive, truthful dataset covering 6,000+ employees and contractors with over 99\% accuracy, reconciling each user's management chain up to the CEO}
-        \resumeItem{Developed multiple web-based dashboards for visualizing Copilot usage and adoption metrics across the organization}
-        \resumeItem{Drove enterprise-wide AI adoption by running demo and training sessions for hundreds of employees globally, developing internal agents, holding 1:1 training sessions, and publishing company-wide communications on new features and use cases}
+        {First State AI Institute}{Newark, DE}
+        {Undergraduate Researcher Software Engineer}{Aug 2026 -- Present}
+        \resumeItemListStart
+        \resumeItem{Networking Nvidia DGX Spark computing devices via RDMA (Remote Direct Memory Access) and a high bandwidth switch in order to efficiently distribute the serving of LLMs for inference. Focused on reducing TTFT (time to first token), ITL (inter token latency)}
+        \resumeItem{Testing various parallelization techniques: pipeline and tensor parallelization (PP, TP, respectively). Moving from TCP to RDMA for data transfer requires retesting parallelization technique efficiency, as TCP severely hampered the efficiency of TP}
+        \resumeItem{Preliminary results show RDMA allowing for transfer speeds an order of magnitude faster than traditional TCP communication.}
+        
       \resumeItemListEnd
 
-    \resumeHeading
+      \resumeHeading
       {FLIE Labs - Vertically Integrated Projects: Drone}{Newark, DE}
-      {Programmer}{Feb 2026 -- Present}
+      {Principal Engineer}{Feb 2026 -- Present}
       \resumeItemListStart
-        \resumeItem{Implementing autonomous swarming logic for DJI Matrice 100 drones utilizing ROS nodes running on a companion Raspberry Pi}
-        \resumeItem{Developing a SITL to Hardware simulation pipeline to test high level drone swarming logic in a full software environment, and hardware simulation to test drone-specific flight controller logic}
-        \resumeItem{Implementing a custom hybrid UDP networking stack to enable high speed peer to peer swarm communication, while guaranteeing delivery of vital messages}
+        \resumeItem{Lead a 10 person sub-team to develop an autonomous SAR (search and rescue) drone swarm. Building and testing PX4 Holybro x500 v2 drones to act as swarm members}
+        \resumeItem{Writing distributed, embedded C++ utilizing ROS2 for swarming logic, deployed on companion Raspberry Pi}
+        \resumeItem{Research goals include profiling ROS2 performance on constrained systems, and decentralized drone communication over sub-optimal protocols}
+        \resumeItem{Developed a custom SITL simulator environment for DJI Matrice 100 swarms (Gazebo, ROS)}
+      \resumeItemListEnd
+    \resumeHeading
+        {University of Delaware:
+        CIS - Summer Scholars}{Newark, DE}
+        {Undergraduate Researcher}{Jun 2026 -- Aug 2026}
+        \resumeItemListStart
+        \resumeItem{Profiled activation outliers at 73 sites across ViT-B/16 and measured accuracy impact via surgical zeroing ablation. Per-channel thresholds preserve +3.76 pp top-1 over global thresholds (95\% CI significant)}
+        \resumeItem{Implemented Pébay (2008) parallel higher-moments merge for exact streaming statistics (mean/variance/skewness/kurtosis) without materializing full activation tensors}
+        
       \resumeItemListEnd
 
+    
+    
     \resumeHeading
-      {Four Youth Productions}{Wilmington, DE}
-      {STEM Instructor \& Studio Operations Assistant}{Feb 2025 -- Present}
+      {Qnity Electronics}{Wilmington, DE}
+      {Software Engineer \& AI Enablement Intern}{May 2026 -- Aug 2026}
       \resumeItemListStart
-        \resumeItem{Designed \& led after-school STEM lessons (environmental science, physics, CS, chemistry) for 300+ underrepresented students across 4 Wilmington, DE public schools, grades Pre-K through 8th}
-        \resumeItem{Administered company systems: Slack server, security system, NAS, and multiple Apple desktops}
-        \resumeItem{Assisted in managing community events to showcase student work}
+        \resumeItem{Created a Python data cleaning pipeline to reconcile company HR data with M365 Copilot usage metrics, resolving errors across both datasets to form one cohesive, truthful dataset covering 7,000+ employees and contractors with over 99.8\% accuracy}
+        \resumeItem{Developed multiple web-based dashboards for visualizing M365 Copilot usage and adoption metrics across the organization \& drove enterprise-wide AI adoption by running demo and training sessions for hundreds of employees globally}
+        
       \resumeItemListEnd
 
-    \resumeHeading
+    
+\resumeHeading
       {University of Delaware CIS}{Newark, DE}
-      {Teaching Assistant}{Aug 2024 -- Present}
+      {Senior Systems Programming Teaching Assistant}{Aug 2024 -- Present}
       \resumeItemListStart
-        \resumeItem{TA for CISC106 (Python for Engineers), CISC210 (Systems Programming in C), and CISC260 (Computer Architecture \& ARMv8 Assembly)}
+        \resumeItem{TA for CISC106 (Python for Engineers), CISC210 (Systems Programming) \& CISC260 (Computer Architecture \& ARMv8 Assembly)}
+        \resumeItem{Heavily assisted in running the CISC210 lecture section, including delivering full lectures to the class}
         \resumeItem{Led weekly practicum sessions for 25+ students; held office hours and graded assignments}
         \resumeItem{Taught the C programming language, ARMv8 assembly, Bash, Unix systems, and Raspberry Pi hardware interaction}
-        \resumeItem{Heavily assisted in running the CISC210 lecture section, including delivering a full lecture to the class}
+        
       \resumeItemListEnd
+
+    
 
 \end{itemize}
 
@@ -106,20 +125,20 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
 
     \resumeProjectHeading
-      {\textbf{Piemulator - Raspberry Pi HAL} $|$ \emph{C, ASM, Bash, Raspberry Pi}}{November 2025  -- January 2026}
+      {\textbf{Piemulator - Raspberry Pi HAL} $|$ \emph{C, ASM, Bash, Raspberry Pi, Linux}}{Nov 2025  -- Jan 2026}
       \resumeItemListStart
         \resumeItem{Created a Hardware Abstraction Layer that serves as a drop-in replacement for the University of Delaware's \textit{libsense} Raspberry Pi Sense Hat library}
-\resumeItem{Focused on portability and ease of use, currently only depends on libc and pthreads. Earlier versions also depended on ncurses for terminal rendering, but this has since been simplified to ANSI escape codes}
-        \resumeItem{Students can test and develop projects without always needing access to the physical Raspberry Pi, simply needed to link against my libpie instead of the provided libsense}
+\resumeItem{Focused on portability and ease of use, currently only depends on libc and pthreads. Uses ANSI escape codes for terminal rendering}
+        \resumeItem{Students can test and develop projects without always needing access to the physical Raspberry Pi, simply needing to link against my libpie instead of the provided libsense}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\textbf{DanOS - 16 bit Virtual Machine} $|$ \emph{C, Computer Architecture}}{August 2025 -- November 2025}
+      {\textbf{16BitVCP - 16 bit Virtual Computation Platform} $|$ \emph{C, Computer Architecture}}{Aug 2025 -- Nov 2025}
       \resumeItemListStart
         \resumeItem{Single tasking, 16 bit virtual machine written in C}
 
         \resumeItem{Implemented my own RISC-style ISA featuring a segmented memory model and multiple addressing modes}
-\resumeItem{Currently writing a companion assembler to avoid having to write raw bytecode programs}
+        
       \resumeItemListEnd
 
 \end{itemize}
@@ -128,9 +147,10 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: C, C++, Rust, Bash, Python} \\
-     \textbf{Operating Systems}{: Linux, OSX, Windows} \\
-     \textbf{Frameworks/Libraries}{: CUDA, OpenGL, Raylib, SDL, ncurses, React, Svelte, ROS, DJI API}
+     \textbf{Languages}{: C, C++, Rust, BASH, Python, Typescript, SQL} \\
+     \textbf{Frameworks/Libraries}{: CUDA, Raylib, SDL3, ncurses, ROS2, React, Svelte, vLLM}\\
+     \textbf{Tools}{: Git, Wireshark, Gazebo, Linux}\\
+     \textbf{Hardware}{: STM32, DJI Drones, PX4 Holybro x500 v2, Nvidia DGX Spark, Raspberry Pi}
     }}
  \end{itemize}
 
